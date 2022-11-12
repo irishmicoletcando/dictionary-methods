@@ -42,15 +42,16 @@ userChoiceMenuInput = int(input("What do you want to do? (1-3): "))
 # if user choose 1, add the item on the dictionary 
 if userChoiceMenuInput == 1:
   # ask user for input
+  # ask user for full name
   fullName = input("Enter your full name: ")
-    # ask user for full name
-    # ask user for age
-    # ask user for address
-    # ask gender
-    # ask phone number
-    # ask email
-    # ask if fully vaccinated
-      # ask if they have booster
+  # ask user for age
+  age = int(input("Enter your age: "))
+  # ask user for address
+  # ask gender
+  # ask phone number
+  # ask email
+  # ask if fully vaccinated
+    # ask if they have booster
         # if yes, ask how many 1st or 2nd 
 
   # add in dictionary variable
