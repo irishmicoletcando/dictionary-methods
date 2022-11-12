@@ -14,7 +14,6 @@
 # 		- Option 2: Search, ask full name then display the record
 # 		- Option 3: Ask the user if want to exit or retry.
 
-
 # declare dictionary of personal data
 personal_data = {
   "fullName" : "Irish",
@@ -38,10 +37,13 @@ print("""
     2 -> Search
     3 -> Exit (y/n)
 """)
-
-# ask user to select an item in the menu
-userChoiceMenuInput = int(input("What do you want to do? (1-3): "))
-
+# validating the user's input is its from 1 to 3
+def userChoice():
+  while True:
+    try:
+      # ask user to select an item in the menu
+      userChoiceMenuInput = int(input("What do you want to do? (1-3): "))
+       
 # if user choose 1, add the item on the dictionary 
 if userChoiceMenuInput == 1:
   # ask user for input and adding in dictionary variable
@@ -84,13 +86,9 @@ if userChoiceMenuInput == 1:
 # check if the name is in the dictionary list
 if userChoiceMenuInput == 2:
   fullNameInOptionTwo = input("Enter your full name: ")
-  if fullNameInOptionTwo in personal_data:
-    print("Yey")
-    for personNumber, personalInfo in personal_data.items():
   # if yes, display all the information
-      for key in personalInfo:
-        print(f"{key} : {personalInfo[key]}")
-
+  if fullNameInOptionTwo in personal_data["person1"]["Full Name"]:
+    print(f"Full Name: {fullNameInOptionTwo}")
   # if no, print no records found
   else:
     print("No records found!")
@@ -114,3 +112,4 @@ def exitOrTryAgain():
 # if 3, exit or retry program
 if userChoiceMenuInput == 3:
   exitOrTryAgain()
+  # will changed the arrangement after the program is finalized
