@@ -14,33 +14,33 @@
 # 		- Option 2: Search, ask full name then display the record
 # 		- Option 3: Ask the user if want to exit or retry.
 
+# declare dictionary of personal data
 def mainProgram():
-  # declare dictionary of personal data
-  personal_data = {
-    # "person1" : {
-    #   "Full Name" : "Irish Micole Cando",
-    #   "Age" : 20,
-    #   "Address" : "85 Interior Derupa St. Maysan, Valenzuela City",
-    #   "Gender": "Female",
-    #   "Phonenumber" : "09454678505",
-    #   "Email" : "irishmicolecando@gmail.com",
-    #   "Fully Vaccinated": "Yes",
-    #   "Booster": "Yes",
-    #   "Booster Number": "1st"
-    # },
-    "person2" : {
-    }
-  }
-  # display menu of options
-  print("""
-    Menu:
-      1 -> Add an item
-      2 -> Search
-      3 -> Exit (y/n)
-  """)
-
   while True:
-    # validating the user's input is its from 1 to 3
+    personal_data = {
+      "person1" : {
+        "Full Name" : "Irish Micole Cando",
+        "Age" : 20,
+        "Address" : "85 Interior Derupa St. Maysan, Valenzuela City",
+        "Gender": "Female",
+        "Phonenumber" : "09454678505",
+        "Email" : "irishmicolecando@gmail.com",
+        "Fully Vaccinated": "Yes",
+        "Booster": "Yes",
+        "Booster Number": "1st"
+      },
+      "person2" : {
+      }
+    }
+    # display menu of options
+    print("""
+      Menu:
+        1 -> Add an item
+        2 -> Search
+        3 -> Exit (y/n)
+    """)
+
+      # validating the user's input is its from 1 to 3
     while True:
       try:
         # ask user to select an item in the menu
@@ -58,6 +58,7 @@ def mainProgram():
     # if user choose 1, add the item on the dictionary 
     if userChoiceMenuInput == 1:
       # ask user for input and adding in dictionary variable
+      # personal_data["person2"] = {}
       # ask user for full name
       fullName = input("Enter your full name: ")
       personal_data["person2"]["Full Name"] = fullName
@@ -69,16 +70,16 @@ def mainProgram():
       personal_data["person2"]["Address"] = address
       # ask gender
       gender = input("Enter your gender: ")
-      personal_data["person2"]["Gender"] = gender
+      personal_data["person2"]["Gender"] = gender 
       # ask phone number
       phonenumber = input("Enter your phone number: ")
       personal_data["person2"]["Phone Number"] = phonenumber
       # ask email
       email = input("Enter your email: ")
-      personal_data["person2"]["Email"] = email
+      personal_data["person2"]["Email"] = email 
       # ask if fully vaccinated
       fullyvaccinated = input("Are you fully vaccinated? (Yes/No): ").lower()
-      personal_data["person2"]["Fully Vaccinated"] = fullyvaccinated
+      personal_data["person2"]["Fully Vaccinated"] = fullyvaccinated 
       # ask if they have booster
       if fullyvaccinated == "yes":
         booster = input("Do you have a booster? (Yes/No): ").lower()
@@ -95,8 +96,7 @@ def mainProgram():
     if userChoiceMenuInput == 2:
       fullNameOptionTwo = input("Enter your full name: ")
       if fullNameOptionTwo in personal_data:
-        personInformation = personal_data.get("person2")
-        print(personInformation)
+        print()
       else:
         print("No record saved!")
     
@@ -112,6 +112,5 @@ def mainProgram():
         elif exitInput == "y": 
           print("-------------------------------\nThank you!")
           exit()
-
 
 mainProgram()
