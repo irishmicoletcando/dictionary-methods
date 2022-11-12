@@ -87,8 +87,9 @@ def mainProgram():
   # if 2, check if the name is in the dictionary list
   if userChoiceMenuInput == 2:
     fullNameOptionTwo = input("Enter your full name: ")
-    if fullNameOptionTwo in personal_data.items():
-      for 
+    if fullNameOptionTwo in personal_data["person1"]["Full Name"] or personal_data["person2"]["Full Name"]:
+      for person, information in personal_data["person1"].items() or personal_data["person2"].items():
+        print(f"{person} : {information}")
     else:
       print("No record saved!")
   
