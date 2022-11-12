@@ -80,7 +80,6 @@ def mainProgram():
       if booster == "yes":
         boosternumber = input("Do you have 1st or 2nd booster?: ")
         personal_data["person2"]["Booster Number"] = boosternumber
-    print(personal_data.values())
     # print saved if added
     print("Information saved!")
 
