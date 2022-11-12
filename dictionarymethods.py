@@ -17,6 +17,7 @@
 
 # declare dictionary of personal data
 personal_data = {
+  "fullName" : "Irish",
   "person1" : {
     "Full Name" : "Irish Micole Cando",
     "Age" : 20,
@@ -84,13 +85,32 @@ if userChoiceMenuInput == 1:
 if userChoiceMenuInput == 2:
   fullNameInOptionTwo = input("Enter your full name: ")
   if fullNameInOptionTwo in personal_data:
+    print("Yey")
+    for personNumber, personalInfo in personal_data.items():
   # if yes, display all the information
-    for person in personal_data:
-      for key in
+      for key in personalInfo:
+        print(f"{key} : {personalInfo[key]}")
 
   # if no, print no records found
+  else:
+    print("No records found!")
 
-# if 3
+# if 3, exit or retry program
+# if userChoiceMenuInput == 3:
+#   exitOrTryAgain()
 # ask the user if they want to exit or retry
-# if exit, exit the program
-# if retry display the menu of options and have the user selct an item in menu
+def exitOrTryAgain():
+  while True:
+    exitInput = input("Do you want to exit? (Y/N): ").lower()
+    # if retry display the menu of options and have the user selct an item in menu
+    if exitInput == "n":
+      # function name of the whole program -> will be inserted if both option 1 and 2 are done
+      print("ok") # for testing only
+    # if exit, exit the program
+    elif exitInput == "y": 
+      print("-------------------------------\nThank you!")
+      break
+
+# if 3, exit or retry program
+if userChoiceMenuInput == 3:
+  exitOrTryAgain()
