@@ -49,11 +49,18 @@ if userChoiceMenuInput == 1:
   # ask user for address
   address = input("Enter your address: ")
   # ask gender
+  gender = input("Enter your gender: ")
   # ask phone number
+  phonenumber = input("Enter your phone number: ")
   # ask email
+  email = input("Enter your email: ")
   # ask if fully vaccinated
-    # ask if they have booster
+  fullyvaccinated = input("Are you fully vaccinated? (Yes/No): ").lower()
+  # ask if they have booster
+  if fullyvaccinated == "yes":
+    booster = input("Do you have a booster? (Yes/No): ")
         # if yes, ask how many 1st or 2nd 
+
 
   # add in dictionary variable
   # print saved if added
