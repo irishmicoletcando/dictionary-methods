@@ -17,15 +17,17 @@
 
 # declare dictionary of personal data
 personal_data = {
-  "fullname" : "Irish Micole Cando",
-  "age" : 20,
-  "address" : "85 Interior Derupa St. Maysan, Valenzuela City",
-  "gender": "Female",
-  "phonenumber" : "09454678505",
-  "email" : "irishmicolecando@gmail.com",
-  "fullyvaccinated": "Yes",
-  "booster": "Yes",
-  "boosternumber": "1st"
+  "person1" : {
+    "fullname" : "Irish Micole Cando",
+    "age" : 20,
+    "address" : "85 Interior Derupa St. Maysan, Valenzuela City",
+    "gender": "Female",
+    "phonenumber" : "09454678505",
+    "email" : "irishmicolecando@gmail.com",
+    "fullyvaccinated": "Yes",
+    "booster": "Yes",
+    "boosternumber": "1st"
+  }
 }
 
 # display menu of options
@@ -64,6 +66,7 @@ if userChoiceMenuInput == 1:
       boosternumber = input("Do you have 1st or 2nd booster?: ")
 
   # add in dictionary variable
+
   # print saved if added
 
 # if 2
