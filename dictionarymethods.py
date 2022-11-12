@@ -87,17 +87,16 @@ def mainProgram():
         if booster == "yes":
           boosternumber = input("Do you have 1st or 2nd booster?: ")
           personal_data["person2"]["Booster Number"] = boosternumber
+      print(personal_data.values())
       # print saved if added
-      print("Saved!")
+      print("Information saved!")
 
     # if 2, check if the name is in the dictionary list
     if userChoiceMenuInput == 2:
       fullNameOptionTwo = input("Enter your full name: ")
       if fullNameOptionTwo in personal_data:
-        for person, value in personal_data.items():
-          print(person)
-          for key in value:
-            print(key + ":", value[key])
+        personInformation = personal_data.get("person2")
+        print(personInformation)
       else:
         print("No record saved!")
     
