@@ -13,11 +13,10 @@
 # 				   The value is another dictionary of personal information
 # 		- Option 2: Search, ask full name then display the record
 # 		- Option 3: Ask the user if want to exit or retry.
-# declare dictionary of personal data
 
-  # if 3, exit or retry program
-  # ask the user if they want to exit or retry
+
 def mainProgram():
+  # declare dictionary of personal data
   personal_data = {
     "person1" : {
       "Full Name" : "Irish Micole Cando",
@@ -100,6 +99,8 @@ def mainProgram():
       for key, fullName in personal_data.items():
         print(f"{key} : {fullName}")
     
+    # if 3, exit or retry program
+    # ask the user if they want to exit or retry
     if userChoiceMenuInput == 3:
       while True:
         exitInput = input("Do you want to exit? (Y/N): ").lower()
