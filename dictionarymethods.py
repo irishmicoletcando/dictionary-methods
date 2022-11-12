@@ -76,9 +76,14 @@ if userChoiceMenuInput == 1:
       personal_data["person2"]["boosternumber"] = boosternumber
   print(personal_data.values())
   # print saved if added
+  print("Saved!")
+
 
 # if 2
 # check if the name is in the dictionary list
+if userChoiceMenuInput == 2:
+  fullName = input("Enter your full name: ")
+  if fullName in personal_data:
   # if yes, display all the information
   # if no, print no records found
 
