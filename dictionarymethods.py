@@ -47,6 +47,7 @@ if userChoiceMenuInput == 1:
   # ask user for age
   age = int(input("Enter your age: "))
   # ask user for address
+  address = input("Enter your address: ")
   # ask gender
   # ask phone number
   # ask email
