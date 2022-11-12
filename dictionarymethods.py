@@ -60,7 +60,8 @@ if userChoiceMenuInput == 1:
   if fullyvaccinated == "yes":
     booster = input("Do you have a booster? (Yes/No): ").lower()
     # if yes, ask how many 1st or 2nd
-    boosternumber = input("Do you have 1st or 2nd booster?: ")
+    if booster == "yes":
+      boosternumber = input("Do you have 1st or 2nd booster?: ")
 
   # add in dictionary variable
   # print saved if added
