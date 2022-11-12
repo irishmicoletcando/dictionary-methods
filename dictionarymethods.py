@@ -43,40 +43,38 @@ userChoiceMenuInput = int(input("What do you want to do? (1-3): "))
 
 # if user choose 1, add the item on the dictionary 
 if userChoiceMenuInput == 1:
-  # ask user for input
+  # ask user for input and adding in dictionary variable
+  personal_data["person2"] = {}
   # ask user for full name
   fullName = input("Enter your full name: ")
+  personal_data["person2"]["fullname"] = fullName
   # ask user for age
   age = int(input("Enter your age: "))
+  personal_data["person2"]["age"] = age
   # ask user for address
   address = input("Enter your address: ")
+  personal_data["person2"]["address"] = address
   # ask gender
   gender = input("Enter your gender: ")
+  personal_data["person2"]["gender"] = gender
   # ask phone number
   phonenumber = input("Enter your phone number: ")
+  personal_data["person2"]["phonenumber"] = phonenumber
   # ask email
   email = input("Enter your email: ")
+  personal_data["person2"]["email"] = email
   # ask if fully vaccinated
   fullyvaccinated = input("Are you fully vaccinated? (Yes/No): ").lower()
+  personal_data["person2"]["fullyvaccinated"] = fullyvaccinated
   # ask if they have booster
   if fullyvaccinated == "yes":
     booster = input("Do you have a booster? (Yes/No): ").lower()
+    personal_data["person2"]["booster"] = booster
     # if yes, ask how many 1st or 2nd
     if booster == "yes":
       boosternumber = input("Do you have 1st or 2nd booster?: ")
-
-  # add in dictionary variable
-  personal_data["person2"] = {}
-  personal_data["person2"]["fullname"] = fullName
-  personal_data["person2"]["age"] = age
-  personal_data["person2"]["address"] = address
-  personal_data["person2"]["gender"] = phonenumber
-  personal_data["person2"]["phonenumber"] = phonenumber
-  personal_data["person2"]["email"] = email
-  personal_data["person2"]["fullyvaccinated"] = fullyvaccinated
-  personal_data["person2"]["booster"] = booster
-  personal_data["person2"]["boosternumber"] = boosternumber
-  
+      personal_data["person2"]["boosternumber"] = boosternumber
+  print(personal_data.values())
   # print saved if added
 
 # if 2
