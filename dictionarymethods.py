@@ -35,7 +35,10 @@ print("""
     2 -> Search
     3 -> Exit (y/n)
 """)
+
 # ask user to select an item in the menu
+userChoiceMenuInput = int(input("What do you want to do? (1-3): "))
+
 # if 1 
   # ask user for input
     # ask user for full name
