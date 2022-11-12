@@ -43,7 +43,11 @@ def userChoice():
     try:
       # ask user to select an item in the menu
       userChoiceMenuInput = int(input("What do you want to do? (1-3): "))
-       
+      # if the input of the user is not from 1 to 3
+      if userChoiceMenuInput not in range(0, 4):
+        print("Invalid! Please enter 1 to 3 only.")
+    except:
+      
 # if user choose 1, add the item on the dictionary 
 if userChoiceMenuInput == 1:
   # ask user for input and adding in dictionary variable
