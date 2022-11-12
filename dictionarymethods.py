@@ -53,42 +53,82 @@ def userChoice():
       break
   return userChoiceMenuInput
   
-# if user choose 1, add the item on the dictionary 
-if userChoiceMenuInput == 1:
+def addingItems() :
   # ask user for input and adding in dictionary variable
-  personal_data["person2"] = {}
-  # ask user for full name
-  fullName = input("Enter your full name: ")
-  personal_data["person2"]["Full Name"] = fullName
-  # ask user for age
-  age = int(input("Enter your age: "))
-  personal_data["person2"]["Age"] = age
-  # ask user for address
-  address = input("Enter your address: ")
-  personal_data["person2"]["Address"] = address
-  # ask gender
-  gender = input("Enter your gender: ")
-  personal_data["person2"]["Gender"] = gender
-  # ask phone number
-  phonenumber = input("Enter your phone number: ")
-  personal_data["person2"]["Phone Number"] = phonenumber
-  # ask email
-  email = input("Enter your email: ")
-  personal_data["person2"]["Email"] = email
-  # ask if fully vaccinated
-  fullyvaccinated = input("Are you fully vaccinated? (Yes/No): ").lower()
-  personal_data["person2"]["Fully Vaccinated"] = fullyvaccinated
-  # ask if they have booster
-  if fullyvaccinated == "yes":
-    booster = input("Do you have a booster? (Yes/No): ").lower()
-    personal_data["person2"]["Booster"] = booster
-    # if yes, ask how many 1st or 2nd
-    if booster == "yes":
-      boosternumber = input("Do you have 1st or 2nd booster?: ")
-      personal_data["person2"]["Booster Number"] = boosternumber
-  print(personal_data.values())
-  # print saved if added
-  print("Saved!")
+    personal_data["person2"] = {}
+    # ask user for full name
+    fullName = input("Enter your full name: ")
+    personal_data["person2"]["Full Name"] = fullName
+    # ask user for age
+    age = int(input("Enter your age: "))
+    personal_data["person2"]["Age"] = age
+    # ask user for address
+    address = input("Enter your address: ")
+    personal_data["person2"]["Address"] = address
+    # ask gender
+    gender = input("Enter your gender: ")
+    personal_data["person2"]["Gender"] = gender
+    # ask phone number
+    phonenumber = input("Enter your phone number: ")
+    personal_data["person2"]["Phone Number"] = phonenumber
+    # ask email
+    email = input("Enter your email: ")
+    personal_data["person2"]["Email"] = email
+    # ask if fully vaccinated
+    fullyvaccinated = input("Are you fully vaccinated? (Yes/No): ").lower()
+    personal_data["person2"]["Fully Vaccinated"] = fullyvaccinated
+    # ask if they have booster
+    if fullyvaccinated == "yes":
+      booster = input("Do you have a booster? (Yes/No): ").lower()
+      personal_data["person2"]["Booster"] = booster
+      # if yes, ask how many 1st or 2nd
+      if booster == "yes":
+        boosternumber = input("Do you have 1st or 2nd booster?: ")
+        personal_data["person2"]["Booster Number"] = boosternumber
+    print(personal_data.values())
+    # print saved if added
+    print("Saved!")
+
+# main program
+def mainProgram() :
+  userChoiceInput = userChoice()
+  # if user choose 1, add the item on the dictionary 
+  if userChoiceInput == 1:
+    addingItems()
+    # # ask user for input and adding in dictionary variable
+    # personal_data["person2"] = {}
+    # # ask user for full name
+    # fullName = input("Enter your full name: ")
+    # personal_data["person2"]["Full Name"] = fullName
+    # # ask user for age
+    # age = int(input("Enter your age: "))
+    # personal_data["person2"]["Age"] = age
+    # # ask user for address
+    # address = input("Enter your address: ")
+    # personal_data["person2"]["Address"] = address
+    # # ask gender
+    # gender = input("Enter your gender: ")
+    # personal_data["person2"]["Gender"] = gender
+    # # ask phone number
+    # phonenumber = input("Enter your phone number: ")
+    # personal_data["person2"]["Phone Number"] = phonenumber
+    # # ask email
+    # email = input("Enter your email: ")
+    # personal_data["person2"]["Email"] = email
+    # # ask if fully vaccinated
+    # fullyvaccinated = input("Are you fully vaccinated? (Yes/No): ").lower()
+    # personal_data["person2"]["Fully Vaccinated"] = fullyvaccinated
+    # # ask if they have booster
+    # if fullyvaccinated == "yes":
+    #   booster = input("Do you have a booster? (Yes/No): ").lower()
+    #   personal_data["person2"]["Booster"] = booster
+    #   # if yes, ask how many 1st or 2nd
+    #   if booster == "yes":
+    #     boosternumber = input("Do you have 1st or 2nd booster?: ")
+    #     personal_data["person2"]["Booster Number"] = boosternumber
+    # print(personal_data.values())
+    # # print saved if added
+    # print("Saved!")
 
 
 # if 2
