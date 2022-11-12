@@ -39,8 +39,10 @@ print("""
 # ask user to select an item in the menu
 userChoiceMenuInput = int(input("What do you want to do? (1-3): "))
 
-# if 1 
+# if user choose 1, add the item on the dictionary 
+if userChoiceMenuInput == 1:
   # ask user for input
+  fullName = input("Enter your full name: ")
     # ask user for full name
     # ask user for age
     # ask user for address
