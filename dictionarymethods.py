@@ -29,7 +29,12 @@ personal_data = {
 }
 
 # display menu of options
-
+print("""
+  Menu:
+    1 -> Add an item
+    2 -> Search
+    3 -> Exit (y/n)
+""")
 # ask user to select an item in the menu
 # if 1 
   # ask user for input
