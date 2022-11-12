@@ -66,7 +66,17 @@ if userChoiceMenuInput == 1:
       boosternumber = input("Do you have 1st or 2nd booster?: ")
 
   # add in dictionary variable
-
+  personal_data["person2"] = {}
+  personal_data["person2"]["fullname"] = fullName
+  personal_data["person2"]["age"] = age
+  personal_data["person2"]["address"] = address
+  personal_data["person2"]["gender"] = phonenumber
+  personal_data["person2"]["phonenumber"] = phonenumber
+  personal_data["person2"]["email"] = email
+  personal_data["person2"]["fullyvaccinated"] = fullyvaccinated
+  personal_data["person2"]["booster"] = booster
+  personal_data["person2"]["boosternumber"] = boosternumber
+  
   # print saved if added
 
 # if 2
