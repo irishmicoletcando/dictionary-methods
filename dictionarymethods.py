@@ -14,21 +14,20 @@
 # 		- Option 2: Search, ask full name then display the record
 # 		- Option 3: Ask the user if want to exit or retry.
 
-
 def mainProgram():
   # declare dictionary of personal data
   personal_data = {
-    "person1" : {
-      "Full Name" : "Irish Micole Cando",
-      "Age" : 20,
-      "Address" : "85 Interior Derupa St. Maysan, Valenzuela City",
-      "Gender": "Female",
-      "Phonenumber" : "09454678505",
-      "Email" : "irishmicolecando@gmail.com",
-      "Fully Vaccinated": "Yes",
-      "Booster": "Yes",
-      "Booster Number": "1st"
-    },
+    # "person1" : {
+    #   "Full Name" : "Irish Micole Cando",
+    #   "Age" : 20,
+    #   "Address" : "85 Interior Derupa St. Maysan, Valenzuela City",
+    #   "Gender": "Female",
+    #   "Phonenumber" : "09454678505",
+    #   "Email" : "irishmicolecando@gmail.com",
+    #   "Fully Vaccinated": "Yes",
+    #   "Booster": "Yes",
+    #   "Booster Number": "1st"
+    # },
     "person2" : {
     }
   }
@@ -59,7 +58,6 @@ def mainProgram():
     # if user choose 1, add the item on the dictionary 
     if userChoiceMenuInput == 1:
       # ask user for input and adding in dictionary variable
-      personal_data["person2"] = {}
       # ask user for full name
       fullName = input("Enter your full name: ")
       personal_data["person2"]["Full Name"] = fullName
@@ -89,20 +87,24 @@ def mainProgram():
         if booster == "yes":
           boosternumber = input("Do you have 1st or 2nd booster?: ")
           personal_data["person2"]["Booster Number"] = boosternumber
-      print(personal_data.values())
       # print saved if added
       print("Saved!")
 
     # if 2, check if the name is in the dictionary list
     if userChoiceMenuInput == 2:
-      fullName = input("Enter your full name: ")
-      for key, fullName in personal_data.items():
-        print(f"{key} : {fullName}")
+      fullNameOptionTwo = input("Enter your full name: ")
+      if fullNameOptionTwo in personal_data:
+        for person, value in personal_data.items():
+          print(person)
+          for key in value:
+            print(key + ":", value[key])
+      else:
+        print("No record saved!")
     
     # if 3, exit or retry program
-    # ask the user if they want to exit or retry
     if userChoiceMenuInput == 3:
       while True:
+        # ask the user if they want to exit or retry
         exitInput = input("Do you want to exit? (Y/N): ").lower()
         # if retry display the menu of options and have the user selct an item in menu
         if exitInput == "n":
@@ -111,5 +113,6 @@ def mainProgram():
         elif exitInput == "y": 
           print("-------------------------------\nThank you!")
           exit()
+
 
 mainProgram()
