@@ -16,6 +16,18 @@
 
 
 # declare dictionary of personal data
+personal_data = {
+  "fullname" : "Irish Micole Cando",
+  "age" : 20,
+  "address" : "85 Interior Derupa St. Maysan, Valenzuela City",
+  "gender": "Female",
+  "phonenumber" : "09454678505",
+  "email" : "irishmicolecando@gmail.com",
+  "fullyvaccinated": "Yes",
+  "booster": "Yes",
+  "boosternumber": "1st"
+}
+
 # display menu of options
 
 # ask user to select an item in the menu
